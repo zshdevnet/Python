@@ -82,3 +82,4 @@ Python provides a variety of built-in data types to handle different kinds of da
 |                 | `not in`     | Not in collection        | `'z' not in 'apple'`    | `True`                                           |
 | **Identity**    | `is`         | Same object              | `x is y`                | `True` if same memory                            |
 |                 | `is not`     | Not same object          | `x is not y`            | `True` if not same object                        |
+
