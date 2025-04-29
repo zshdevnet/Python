@@ -83,3 +83,15 @@ Python provides a variety of built-in data types to handle different kinds of da
 | **Identity**    | `is`         | Same object              | `x is y`                | `True` if same memory                            |
 |                 | `is not`     | Not same object          | `x is not y`            | `True` if not same object                        |
 
+
+# Python Data Structures Comparison
+
+| Data Structure | Ordered | Mutable | Duplicates Allowed | Syntax Example              | Common Methods                                                                 | Use Cases                                |
+|----------------|---------|---------|---------------------|-----------------------------|--------------------------------------------------------------------------------|------------------------------------------|
+| **List**       | Yes     | Yes     | Yes                 | `my_list = [1, 2, 3]`       | `append()`, `extend()`, `insert()`, `pop()`, `remove()`, `sort()`, `reverse()`, `count()`, `index()` | Collections of items, queues, stacks     |
+| **Tuple**      | Yes     | No      | Yes                 | `my_tuple = (1, 2, 3)`      | `count()`, `index()`                                                           | Fixed data, function returns             |
+| **Dict**       | Yes¹    | Yes     | No (keys)           | `my_dict = {"a": 1}`        | `get()`, `keys()`, `values()`, `items()`, `pop()`, `update()`, `clear()`       | Key-value lookups, configurations        |
+| **Set**        | No      | Yes     | No                  | `my_set = {1, 2, 3}`        | `add()`, `remove()`, `discard()`, `union()`, `intersection()`, `difference()`, `clear()` | Unique items, membership checks          |
+| **String**     | Yes     | No      | Yes                 | `my_str = "hello"`          | `lower()`, `upper()`, `find()`, `replace()`, `split()`, `join()`, `strip()`    | Text processing                          |
+
+> ¹ Insertion order preserved from Python 3.7+
