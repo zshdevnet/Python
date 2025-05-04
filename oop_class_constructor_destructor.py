@@ -10,6 +10,9 @@ class BankAccount:
 
     def get_balance(self):
         return self.__balance
+    
+    def __del__(self):
+        print("The object is closed!")
 
 acc = BankAccount()
 
