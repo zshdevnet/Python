@@ -1,4 +1,6 @@
 # Section 1
 
+```python
 
-here I'm adding this to see from my new brnahc
+print("Let's assume I delete the previous comment with new line, and check the push request!")
+```
