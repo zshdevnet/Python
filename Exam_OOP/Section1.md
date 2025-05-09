@@ -1,6 +1,3 @@
 # Section 1
 
-```python
-
-print("Let's assume I delete the previous comment with new line, and check the push request!")
-```
+okay let's check if I'm sending push request from another collaborater!!! A small changes
