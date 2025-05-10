@@ -1,7 +1,9 @@
 from abc import ABC, abstractmethod
 
 class SmartDevice(ABC):
-    __status = False
+    
+    def __init__(self):
+        self._status = False  # Use single underscore to allow subclass access
 
     @abstractmethod
     def turn_on(self):
@@ -19,31 +21,45 @@ class SmartDevice(ABC):
 class SmartLight(SmartDevice):
 
     def turn_on(self):
-        self.__status = True
+        self._status = True
         print(f"Light is now ON")
     
     def turn_off(self):
-        self.__status = False
+        self._status = False
         print(f"Light is now OFF")
     
 
     def status(self):
-        if self.__status == True:
+        if self._status:
             print("The Smart Light is ON")
         else:
-            print("The smart Light is OFF")
+            print("The Smart Light is OFF")
+
 
 class SmartThermostat(SmartDevice):
+    
     def turn_on(self):
-        return f"Thermostat is heating up..."
+        self._status = True
+        print(f"Thermostat is heating up...")
     
     def turn_off(self):
-        return f"Thermostat is now OFF"
+        self._status = False
+        print(f"Thermostat is now OFF")
     
     def status(self):
-        return super().status()
+        if self._status:
+            print("The Smart Thermostat is ON")
+        else:
+            print("The Smart Thermostat is OFF")
 
-statuscheck = SmartLight()
-statuscheck.turn_on()
-statuscheck.status()
-    
+
+# 🔄 **Testing the objects**
+obj1 = SmartLight()
+obj1.turn_on()
+obj1.status()  # Output: The Smart Light is ON
+
+print("\n")  # Separator
+
+obj2 = SmartThermostat()
+obj2.turn_off()
+obj2.status()  # Output: The Smart Thermostat is OFF
