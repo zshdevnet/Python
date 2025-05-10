@@ -22,4 +22,3 @@ It is used to access attributes and methods of the class inside its own methods.
 If you have multiple instances, self is how the class knows which one it's working with.
 
 ```
-
